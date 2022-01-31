@@ -1,0 +1,32 @@
+{
+    "name": "dudecussi/yii2-aws-s3",
+    "type": "yii2-extension",
+    "description": "An Amazon S3 component for Yii2",
+    "keywords": ["yii2", "aws", "s3", "aws-s3", "yii2-aws", "yii2-s3"],
+    "homepage": "https://github.com/dudecussi/yii2-aws-s3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduardo Decussi",
+            "email": "eduardodecussi@gmail.com",
+            "homepage": "https://decussi.pro"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/dudecussi/yii2-aws-s3/issues?state=open"
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "aws/aws-sdk-php": "~3.17",
+        "yiisoft/yii2": "~2.0"
+    },
+    "require-dev": {
+        "phpro/grumphp": "~0.8",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "dudecussi\\yii2\\aws\\s3\\": "src/"
+        }
+    }
+}
