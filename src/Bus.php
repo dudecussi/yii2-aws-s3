@@ -1,13 +1,13 @@
 <?php
 
-namespace bpsys\yii2\aws\s3;
+namespace dudecussi\yii2\aws\s3;
 
-use bpsys\yii2\aws\s3\interfaces;
+use dudecussi\yii2\aws\s3\interfaces;
 
 /**
  * Class Bus
  *
- * @package bpsys\yii2\aws\s3
+ * @package dudecussi\yii2\aws\s3
  */
 class Bus implements interfaces\Bus
 {
@@ -17,7 +17,7 @@ class Bus implements interfaces\Bus
     /**
      * Bus constructor.
      *
-     * @param \bpsys\yii2\aws\s3\interfaces\HandlerResolver $inflector
+     * @param \dudecussi\yii2\aws\s3\interfaces\HandlerResolver $inflector
      */
     public function __construct(interfaces\HandlerResolver $inflector)
     {
@@ -25,14 +25,14 @@ class Bus implements interfaces\Bus
     }
 
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\Command $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\Command $command
      *
      * @return mixed
      */
     public function execute(interfaces\commands\Command $command)
     {
         $handler = $this->resolver->resolve($command);
-        
+
         return call_user_func([$handler, 'handle'], $command);
     }
 }

@@ -1,21 +1,21 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\handlers;
+namespace dudecussi\yii2\aws\s3\handlers;
 
 use Aws\CommandInterface as AwsCommand;
-use bpsys\yii2\aws\s3\base\handlers\Handler;
-use bpsys\yii2\aws\s3\interfaces\commands\Asynchronous;
-use bpsys\yii2\aws\s3\interfaces\commands\PlainCommand;
+use dudecussi\yii2\aws\s3\base\handlers\Handler;
+use dudecussi\yii2\aws\s3\interfaces\commands\Asynchronous;
+use dudecussi\yii2\aws\s3\interfaces\commands\PlainCommand;
 
 /**
  * Class PlainCommandHandler
  *
- * @package bpsys\yii2\aws\s3\handlers
+ * @package dudecussi\yii2\aws\s3\handlers
  */
 final class PlainCommandHandler extends Handler
 {
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\PlainCommand $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\PlainCommand $command
      *
      * @return \Aws\ResultInterface|\GuzzleHttp\Promise\PromiseInterface
      */
@@ -30,7 +30,7 @@ final class PlainCommandHandler extends Handler
     }
 
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\PlainCommand $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\PlainCommand $command
      *
      * @return bool
      */
@@ -40,7 +40,7 @@ final class PlainCommandHandler extends Handler
     }
 
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\PlainCommand $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\PlainCommand $command
      *
      * @return \Aws\CommandInterface
      */

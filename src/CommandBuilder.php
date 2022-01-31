@@ -1,13 +1,13 @@
 <?php
 
-namespace bpsys\yii2\aws\s3;
+namespace dudecussi\yii2\aws\s3;
 
-use bpsys\yii2\aws\s3\interfaces;
+use dudecussi\yii2\aws\s3\interfaces;
 
 /**
  * Class CommandBuilder
  *
- * @package bpsys\yii2\aws\s3
+ * @package dudecussi\yii2\aws\s3
  */
 class CommandBuilder implements interfaces\CommandBuilder
 {
@@ -26,7 +26,7 @@ class CommandBuilder implements interfaces\CommandBuilder
     /**
      * CommandBuilder constructor.
      *
-     * @param \bpsys\yii2\aws\s3\interfaces\Bus $bus
+     * @param \dudecussi\yii2\aws\s3\interfaces\Bus $bus
      * @param string $bucket
      * @param string $acl
      * @param int|string|\DateTime $expiration
@@ -42,7 +42,7 @@ class CommandBuilder implements interfaces\CommandBuilder
     /**
      * @param string $className
      *
-     * @return \bpsys\yii2\aws\s3\interfaces\commands\Command
+     * @return \dudecussi\yii2\aws\s3\interfaces\commands\Command
      * @throws \yii\base\InvalidConfigException
      */
     public function build(string $className): interfaces\commands\Command
@@ -58,7 +58,7 @@ class CommandBuilder implements interfaces\CommandBuilder
     }
 
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\Command $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\Command $command
      */
     protected function prepareCommand(interfaces\commands\Command $command)
     {

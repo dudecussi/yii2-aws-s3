@@ -1,14 +1,14 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\base\handlers;
+namespace dudecussi\yii2\aws\s3\base\handlers;
 
 use Aws\S3\S3Client;
-use bpsys\yii2\aws\s3\interfaces\handlers\Handler as HandlerInterface;
+use dudecussi\yii2\aws\s3\interfaces\handlers\Handler as HandlerInterface;
 
 /**
  * Class Handler
  *
- * @package bpsys\yii2\aws\s3\base\handlers
+ * @package dudecussi\yii2\aws\s3\base\handlers
  */
 abstract class Handler implements HandlerInterface
 {

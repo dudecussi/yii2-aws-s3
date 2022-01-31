@@ -1,19 +1,19 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\handlers;
+namespace dudecussi\yii2\aws\s3\handlers;
 
-use bpsys\yii2\aws\s3\base\handlers\Handler;
-use bpsys\yii2\aws\s3\commands\GetPresignedUrlCommand;
+use dudecussi\yii2\aws\s3\base\handlers\Handler;
+use dudecussi\yii2\aws\s3\commands\GetPresignedUrlCommand;
 
 /**
  * Class GetPresignedUrlCommandHandler
  *
- * @package bpsys\yii2\aws\s3\handlers
+ * @package dudecussi\yii2\aws\s3\handlers
  */
 final class GetPresignedUrlCommandHandler extends Handler
 {
     /**
-     * @param \bpsys\yii2\aws\s3\commands\GetPresignedUrlCommand $command
+     * @param \dudecussi\yii2\aws\s3\commands\GetPresignedUrlCommand $command
      *
      * @return string
      */

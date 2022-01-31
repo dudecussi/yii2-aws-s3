@@ -1,24 +1,24 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\base\commands;
+namespace dudecussi\yii2\aws\s3\base\commands;
 
-use bpsys\yii2\aws\s3\interfaces\Bus;
-use bpsys\yii2\aws\s3\interfaces\commands\ExecutableCommand as ExecutableCommandInterface;
+use dudecussi\yii2\aws\s3\interfaces\Bus;
+use dudecussi\yii2\aws\s3\interfaces\commands\ExecutableCommand as ExecutableCommandInterface;
 
 /**
  * Class ExecutableCommand
  *
- * @package bpsys\yii2\aws\s3\base\commands
+ * @package dudecussi\yii2\aws\s3\base\commands
  */
 abstract class ExecutableCommand implements ExecutableCommandInterface
 {
-    /** @var \bpsys\yii2\aws\s3\interfaces\Bus */
+    /** @var \dudecussi\yii2\aws\s3\interfaces\Bus */
     private $bus;
 
     /**
      * ExecutableCommand constructor.
      *
-     * @param \bpsys\yii2\aws\s3\interfaces\Bus $bus
+     * @param \dudecussi\yii2\aws\s3\interfaces\Bus $bus
      */
     public function __construct(Bus $bus)
     {

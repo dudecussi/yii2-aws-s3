@@ -1,17 +1,17 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\commands;
+namespace dudecussi\yii2\aws\s3\commands;
 
-use bpsys\yii2\aws\s3\base\commands\ExecutableCommand;
-use bpsys\yii2\aws\s3\interfaces\commands\HasBucket;
-use bpsys\yii2\aws\s3\interfaces\commands\HasExpiration;
+use dudecussi\yii2\aws\s3\base\commands\ExecutableCommand;
+use dudecussi\yii2\aws\s3\interfaces\commands\HasBucket;
+use dudecussi\yii2\aws\s3\interfaces\commands\HasExpiration;
 
 /**
  * Class GetPresignedUrlCommand
  *
  * @method string execute()
  *
- * @package bpsys\yii2\aws\s3\commands
+ * @package dudecussi\yii2\aws\s3\commands
  */
 class GetPresignedUrlCommand extends ExecutableCommand implements HasBucket, HasExpiration
 {

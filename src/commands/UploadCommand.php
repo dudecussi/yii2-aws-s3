@@ -1,13 +1,13 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\commands;
+namespace dudecussi\yii2\aws\s3\commands;
 
 use Aws\ResultInterface;
-use bpsys\yii2\aws\s3\base\commands\ExecutableCommand;
-use bpsys\yii2\aws\s3\base\commands\traits\Async;
-use bpsys\yii2\aws\s3\interfaces\commands\Asynchronous;
-use bpsys\yii2\aws\s3\interfaces\commands\HasAcl;
-use bpsys\yii2\aws\s3\interfaces\commands\HasBucket;
+use dudecussi\yii2\aws\s3\base\commands\ExecutableCommand;
+use dudecussi\yii2\aws\s3\base\commands\traits\Async;
+use dudecussi\yii2\aws\s3\interfaces\commands\Asynchronous;
+use dudecussi\yii2\aws\s3\interfaces\commands\HasAcl;
+use dudecussi\yii2\aws\s3\interfaces\commands\HasBucket;
 use GuzzleHttp\Promise\PromiseInterface;
 
 /**
@@ -15,7 +15,7 @@ use GuzzleHttp\Promise\PromiseInterface;
  *
  * @method ResultInterface|PromiseInterface execute()
  *
- * @package bpsys\yii2\aws\s3\commands
+ * @package dudecussi\yii2\aws\s3\commands
  */
 class UploadCommand extends ExecutableCommand implements HasBucket, HasAcl, Asynchronous
 {

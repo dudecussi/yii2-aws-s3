@@ -1,16 +1,16 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\commands;
+namespace dudecussi\yii2\aws\s3\commands;
 
-use bpsys\yii2\aws\s3\base\commands\ExecutableCommand;
-use bpsys\yii2\aws\s3\interfaces\commands\HasBucket;
+use dudecussi\yii2\aws\s3\base\commands\ExecutableCommand;
+use dudecussi\yii2\aws\s3\interfaces\commands\HasBucket;
 
 /**
  * Class GetUrlCommand
  *
  * @method string execute()
  *
- * @package bpsys\yii2\aws\s3\commands
+ * @package dudecussi\yii2\aws\s3\commands
  */
 class GetUrlCommand extends ExecutableCommand implements HasBucket
 {

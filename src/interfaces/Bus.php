@@ -1,18 +1,18 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\interfaces;
+namespace dudecussi\yii2\aws\s3\interfaces;
 
-use bpsys\yii2\aws\s3\interfaces\commands\Command;
+use dudecussi\yii2\aws\s3\interfaces\commands\Command;
 
 /**
  * Interface Bus
  *
- * @package bpsys\yii2\aws\s3\interfaces
+ * @package dudecussi\yii2\aws\s3\interfaces
  */
 interface Bus
 {
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\Command $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\Command $command
      *
      * @return mixed
      */

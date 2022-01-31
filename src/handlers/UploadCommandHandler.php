@@ -1,21 +1,21 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\handlers;
+namespace dudecussi\yii2\aws\s3\handlers;
 
-use bpsys\yii2\aws\s3\commands\UploadCommand;
-use bpsys\yii2\aws\s3\base\handlers\Handler;
+use dudecussi\yii2\aws\s3\commands\UploadCommand;
+use dudecussi\yii2\aws\s3\base\handlers\Handler;
 use GuzzleHttp\Psr7;
 use Psr\Http\Message\StreamInterface;
 
 /**
  * Class UploadCommandHandler
  *
- * @package bpsys\yii2\aws\s3\handlers
+ * @package dudecussi\yii2\aws\s3\handlers
  */
 final class UploadCommandHandler extends Handler
 {
     /**
-     * @param \bpsys\yii2\aws\s3\commands\UploadCommand $command
+     * @param \dudecussi\yii2\aws\s3\commands\UploadCommand $command
      *
      * @return \Aws\ResultInterface|\GuzzleHttp\Promise\PromiseInterface
      */

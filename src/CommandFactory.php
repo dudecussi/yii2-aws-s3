@@ -1,32 +1,32 @@
 <?php
 
-namespace bpsys\yii2\aws\s3;
+namespace dudecussi\yii2\aws\s3;
 
-use bpsys\yii2\aws\s3\commands\DeleteCommand;
-use bpsys\yii2\aws\s3\commands\ExistCommand;
-use bpsys\yii2\aws\s3\commands\GetCommand;
-use bpsys\yii2\aws\s3\commands\GetPresignedUrlCommand;
-use bpsys\yii2\aws\s3\commands\GetUrlCommand;
-use bpsys\yii2\aws\s3\commands\PutCommand;
-use bpsys\yii2\aws\s3\commands\RestoreCommand;
-use bpsys\yii2\aws\s3\commands\UploadCommand;
-use bpsys\yii2\aws\s3\commands\ListCommand;
-use bpsys\yii2\aws\s3\interfaces;
+use dudecussi\yii2\aws\s3\commands\DeleteCommand;
+use dudecussi\yii2\aws\s3\commands\ExistCommand;
+use dudecussi\yii2\aws\s3\commands\GetCommand;
+use dudecussi\yii2\aws\s3\commands\GetPresignedUrlCommand;
+use dudecussi\yii2\aws\s3\commands\GetUrlCommand;
+use dudecussi\yii2\aws\s3\commands\PutCommand;
+use dudecussi\yii2\aws\s3\commands\RestoreCommand;
+use dudecussi\yii2\aws\s3\commands\UploadCommand;
+use dudecussi\yii2\aws\s3\commands\ListCommand;
+use dudecussi\yii2\aws\s3\interfaces;
 
 /**
  * Class CommandFactory
  *
- * @package bpsys\yii2\aws\s3
+ * @package dudecussi\yii2\aws\s3
  */
 class CommandFactory
 {
-    /** @var \bpsys\yii2\aws\s3\interfaces\CommandBuilder */
+    /** @var \dudecussi\yii2\aws\s3\interfaces\CommandBuilder */
     protected $builder;
 
     /**
      * CommandFactory constructor.
      *
-     * @param \bpsys\yii2\aws\s3\interfaces\CommandBuilder $builder
+     * @param \dudecussi\yii2\aws\s3\interfaces\CommandBuilder $builder
      */
     public function __construct(interfaces\CommandBuilder $builder)
     {
@@ -36,7 +36,7 @@ class CommandFactory
     /**
      * @param string $filename
      *
-     * @return \bpsys\yii2\aws\s3\commands\GetCommand
+     * @return \dudecussi\yii2\aws\s3\commands\GetCommand
      */
     public function get(string $filename): GetCommand
     {
@@ -51,7 +51,7 @@ class CommandFactory
      * @param string $filename
      * @param mixed  $body
      *
-     * @return \bpsys\yii2\aws\s3\commands\PutCommand
+     * @return \dudecussi\yii2\aws\s3\commands\PutCommand
      */
     public function put(string $filename, $body): PutCommand
     {
@@ -65,7 +65,7 @@ class CommandFactory
     /**
      * @param string $filename
      *
-     * @return \bpsys\yii2\aws\s3\commands\DeleteCommand
+     * @return \dudecussi\yii2\aws\s3\commands\DeleteCommand
      */
     public function delete(string $filename): DeleteCommand
     {
@@ -80,7 +80,7 @@ class CommandFactory
      * @param string $filename
      * @param mixed  $source
      *
-     * @return \bpsys\yii2\aws\s3\commands\UploadCommand
+     * @return \dudecussi\yii2\aws\s3\commands\UploadCommand
      */
     public function upload(string $filename, $source): UploadCommand
     {
@@ -95,7 +95,7 @@ class CommandFactory
      * @param string $filename
      * @param int    $days      lifetime of the active copy in days
      *
-     * @return \bpsys\yii2\aws\s3\commands\RestoreCommand
+     * @return \dudecussi\yii2\aws\s3\commands\RestoreCommand
      */
     public function restore(string $filename, int $days): RestoreCommand
     {
@@ -109,7 +109,7 @@ class CommandFactory
     /**
      * @param string $filename
      *
-     * @return \bpsys\yii2\aws\s3\commands\ExistCommand
+     * @return \dudecussi\yii2\aws\s3\commands\ExistCommand
      */
     public function exist(string $filename): ExistCommand
     {
@@ -123,7 +123,7 @@ class CommandFactory
     /**
      * @param string $prefix
      *
-     * @return \bpsys\yii2\aws\s3\commands\ListCommand
+     * @return \dudecussi\yii2\aws\s3\commands\ListCommand
      */
     public function list(string $prefix): ListCommand
     {
@@ -137,7 +137,7 @@ class CommandFactory
     /**
      * @param string $filename
      *
-     * @return \bpsys\yii2\aws\s3\commands\GetUrlCommand
+     * @return \dudecussi\yii2\aws\s3\commands\GetUrlCommand
      */
     public function getUrl(string $filename): GetUrlCommand
     {
@@ -152,7 +152,7 @@ class CommandFactory
      * @param string $filename
      * @param mixed  $expires
      *
-     * @return \bpsys\yii2\aws\s3\commands\GetPresignedUrlCommand
+     * @return \dudecussi\yii2\aws\s3\commands\GetPresignedUrlCommand
      */
     public function getPresignedUrl(string $filename, $expires = null): GetPresignedUrlCommand
     {

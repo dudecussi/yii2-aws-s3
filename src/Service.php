@@ -1,11 +1,11 @@
 <?php
 
-namespace bpsys\yii2\aws\s3;
+namespace dudecussi\yii2\aws\s3;
 
 use Aws\ResultInterface;
-use bpsys\yii2\aws\s3\interfaces\commands\Command;
-use bpsys\yii2\aws\s3\interfaces\HandlerResolver;
-use bpsys\yii2\aws\s3\interfaces\Service as ServiceInterface;
+use dudecussi\yii2\aws\s3\interfaces\commands\Command;
+use dudecussi\yii2\aws\s3\interfaces\HandlerResolver;
+use dudecussi\yii2\aws\s3\interfaces\Service as ServiceInterface;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
@@ -25,7 +25,7 @@ use yii\helpers\ArrayHelper;
  * @method string           getUrl(string $filename)
  * @method string           getPresignedUrl(string $filename, $expires)
  *
- * @package bpsys\yii2\aws\s3
+ * @package dudecussi\yii2\aws\s3
  */
 class Service extends Component implements ServiceInterface
 {
@@ -69,7 +69,7 @@ class Service extends Component implements ServiceInterface
     /**
      * Executes a command.
      *
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\Command $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\Command $command
      *
      * @return mixed
      */
@@ -83,7 +83,7 @@ class Service extends Component implements ServiceInterface
      *
      * @param string $commandClass
      *
-     * @return \bpsys\yii2\aws\s3\interfaces\commands\Command
+     * @return \dudecussi\yii2\aws\s3\interfaces\commands\Command
      */
     public function create(string $commandClass): Command
     {
@@ -93,7 +93,7 @@ class Service extends Component implements ServiceInterface
     /**
      * Returns command factory.
      *
-     * @return \bpsys\yii2\aws\s3\CommandFactory
+     * @return \dudecussi\yii2\aws\s3\CommandFactory
      */
     public function commands(): CommandFactory
     {
@@ -103,7 +103,7 @@ class Service extends Component implements ServiceInterface
     /**
      * Returns handler resolver.
      *
-     * @return \bpsys\yii2\aws\s3\interfaces\HandlerResolver
+     * @return \dudecussi\yii2\aws\s3\interfaces\HandlerResolver
      */
     public function getResolver(): HandlerResolver
     {
@@ -240,10 +240,10 @@ class Service extends Component implements ServiceInterface
     {
         return [
             'client' => ['class' => 'Aws\S3\S3Client'],
-            'resolver' => ['class' => 'bpsys\yii2\aws\s3\HandlerResolver'],
-            'bus' => ['class' => 'bpsys\yii2\aws\s3\Bus'],
-            'builder' => ['class' => 'bpsys\yii2\aws\s3\CommandBuilder'],
-            'factory' => ['class' => 'bpsys\yii2\aws\s3\CommandFactory'],
+            'resolver' => ['class' => 'dudecussi\yii2\aws\s3\HandlerResolver'],
+            'bus' => ['class' => 'dudecussi\yii2\aws\s3\Bus'],
+            'builder' => ['class' => 'dudecussi\yii2\aws\s3\CommandBuilder'],
+            'factory' => ['class' => 'dudecussi\yii2\aws\s3\CommandFactory'],
         ];
     }
 

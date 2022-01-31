@@ -1,11 +1,11 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\base\commands\traits;
+namespace dudecussi\yii2\aws\s3\base\commands\traits;
 
 /**
  * Trait Options
  *
- * @package bpsys\yii2\aws\s3\base\commands\traits
+ * @package dudecussi\yii2\aws\s3\base\commands\traits
  */
 trait Options
 {

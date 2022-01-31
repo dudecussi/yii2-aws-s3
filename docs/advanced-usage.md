@@ -1,10 +1,10 @@
 # Advanced usage
 
 ```php
-/** @var \bpsys\yii2\aws\s3\interfaces\Service $s3 */
+/** @var \dudecussi\yii2\aws\s3\interfaces\Service $s3 */
 $s3 = Yii::$app->get('s3');
 
-/** @var \bpsys\yii2\aws\s3\commands\GetCommand $command */
+/** @var \dudecussi\yii2\aws\s3\commands\GetCommand $command */
 $command = $s3->create(GetCommand::class);
 $command->inBucket('my-another-bucket')->byFilename('filename.ext')->saveAs('/path/to/local/file.ext');
 
@@ -40,9 +40,9 @@ Consider the following command:
 
 namespace app\components\s3\commands;
 
-use bpsys\yii2\aws\s3\base\commands\traits\Options;
-use bpsys\yii2\aws\s3\interfaces\commands\Command;
-use bpsys\yii2\aws\s3\interfaces\commands\HasBucket;
+use dudecussi\yii2\aws\s3\base\commands\traits\Options;
+use dudecussi\yii2\aws\s3\interfaces\commands\Command;
+use dudecussi\yii2\aws\s3\interfaces\commands\HasBucket;
 
 class MyCommand implements Command, HasBucket
 {
@@ -86,7 +86,7 @@ The handler for this command looks like this:
 namespace app\components\s3\handlers;
 
 use app\components\s3\commands\MyCommand;
-use bpsys\yii2\aws\s3\base\handlers\Handler;
+use dudecussi\yii2\aws\s3\base\handlers\Handler;
 
 class MyCommandHandler extends Handler
 {
@@ -104,7 +104,7 @@ class MyCommandHandler extends Handler
 And usage this command:
 
 ```php
-/** @var \bpsys\yii2\aws\s3\interfaces\Service */
+/** @var \dudecussi\yii2\aws\s3\interfaces\Service */
 $s3 = Yii::$app->get('s3');
 
 /** @var \app\components\s3\commands\MyCommand $command */
@@ -122,8 +122,8 @@ Custom plain command looks like this:
 
 namespace app\components\s3\commands;
 
-use bpsys\yii2\aws\s3\interfaces\commands\HasBucket;
-use bpsys\yii2\aws\s3\interfaces\commands\PlainCommand;
+use dudecussi\yii2\aws\s3\interfaces\commands\HasBucket;
+use dudecussi\yii2\aws\s3\interfaces\commands\PlainCommand;
 
 class MyPlainCommand implements PlainCommand, HasBucket
 {

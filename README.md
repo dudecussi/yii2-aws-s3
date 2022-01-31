@@ -2,11 +2,11 @@
 
 An Amazon S3 component for Yii2.
 
-[![License](https://poser.pugx.org/bp-sys/yii2-aws-s3/license)](https://github.com/bp-sys/yii2-aws-s3/blob/2.x/LICENSE) [![Latest Stable Version](https://poser.pugx.org/bp-sys/yii2-aws-s3/v)](//packagist.org/packages/bp-sys/yii2-aws-s3) [![Total Downloads](https://poser.pugx.org/bp-sys/yii2-aws-s3/downloads)](//packagist.org/packages/bp-sys/yii2-aws-s3) [![Latest Unstable Version](https://poser.pugx.org/bp-sys/yii2-aws-s3/v/unstable)](//packagist.org/packages/bp-sys/yii2-aws-s3)
+[![License](https://poser.pugx.org/dudecussi/yii2-aws-s3/license)](https://github.com/dudecussi/yii2-aws-s3/blob/2.x/LICENSE) [![Latest Stable Version](https://poser.pugx.org/dudecussi/yii2-aws-s3/v)](//packagist.org/packages/dudecussi/yii2-aws-s3) [![Total Downloads](https://poser.pugx.org/dudecussi/yii2-aws-s3/downloads)](//packagist.org/packages/dudecussi/yii2-aws-s3) [![Latest Unstable Version](https://poser.pugx.org/dudecussi/yii2-aws-s3/v/unstable)](//packagist.org/packages/dudecussi/yii2-aws-s3)
 
 > Yii2 AWS S3 uses [SemVer](http://semver.org/).
 
-> Version 2.x requires PHP 7. For PHP less 7.0 use [1.x](https://github.com/bp-sys/yii2-aws-s3/tree/1.x).
+> Version 2.x requires PHP 7. For PHP less 7.0 use [1.x](https://github.com/dudecussi/yii2-aws-s3/tree/1.x).
 
 ## About this project
 
@@ -21,7 +21,7 @@ We will also add support for easier integration with your models, by adding a S3
 1. Run the [Composer](http://getcomposer.org/download/) command to install the latest version:
 
     ```bash
-    composer require bp-sys/yii2-aws-s3 ~2.0
+    composer require dudecussi/yii2-aws-s3 ~2.0
     ```
 
 2. Add the component to `config/main.php`
@@ -30,7 +30,7 @@ We will also add support for easier integration with your models, by adding a S3
     'components' => [
         // ...
         's3' => [
-            'class' => 'bpsys\yii2\aws\s3\Service',
+            'class' => 'dudecussi\yii2\aws\s3\Service',
             'credentials' => [ // Aws\Credentials\CredentialsInterface|array|callable
                 'key' => 'my-key',
                 'secret' => 'my-secret',
@@ -51,7 +51,7 @@ We will also add support for easier integration with your models, by adding a S3
 ### Usage of the command factory and additional params
 
 ```php
-/** @var \bpsys\yii2\aws\s3\Service $s3 */
+/** @var \dudecussi\yii2\aws\s3\Service $s3 */
 $s3 = Yii::$app->get('s3');
 
 /** @var \Aws\ResultInterface $result */
@@ -80,7 +80,7 @@ $signedUrl = $s3->commands()->getPresignedUrl('filename.ext', '+2 days')->execut
 ### Short syntax
 
 ```php
-/** @var \bpsys\yii2\aws\s3\Service $s3 */
+/** @var \dudecussi\yii2\aws\s3\Service $s3 */
 $s3 = Yii::$app->get('s3');
 
 /** @var \Aws\ResultInterface $result */
@@ -111,10 +111,10 @@ $signedUrl = $s3->getPresignedUrl('filename.ext', '+2 days'); // Pass only one p
 ## Advanced usage
 
 ```php
-/** @var \bpsys\yii2\aws\s3\interfaces\Service $s3 */
+/** @var \dudecussi\yii2\aws\s3\interfaces\Service $s3 */
 $s3 = Yii::$app->get('s3');
 
-/** @var \bpsys\yii2\aws\s3\commands\GetCommand $command */
+/** @var \dudecussi\yii2\aws\s3\commands\GetCommand $command */
 $command = $s3->create(GetCommand::class);
 $command->inBucket('my-another-bucket')->byFilename('filename.ext')->saveAs('/path/to/local/file.ext');
 
@@ -135,7 +135,7 @@ Attach the Trait to the model with some media attribute that will be saved in S3
 ```php
 class Person extends \yii\db\ActiveRecord
 {
-    use \bpsys\yii2\aws\s3\traits\S3MediaTrait;
+    use \dudecussi\yii2\aws\s3\traits\S3MediaTrait;
     
     // ...
 }

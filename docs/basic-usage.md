@@ -3,7 +3,7 @@
 ## Usage of the command factory and additional params
 
 ```php
-/** @var \bpsys\yii2\aws\s3\Service $s3 */
+/** @var \dudecussi\yii2\aws\s3\Service $s3 */
 $s3 = Yii::$app->get('s3');
 
 /** @var \Aws\ResultInterface $result */
@@ -32,7 +32,7 @@ $signedUrl = $s3->commands()->getPresignedUrl('filename.ext', '+2 days')->execut
 ## Short syntax
 
 ```php
-/** @var \bpsys\yii2\aws\s3\Service $s3 */
+/** @var \dudecussi\yii2\aws\s3\Service $s3 */
 $s3 = Yii::$app->get('s3');
 
 /** @var \Aws\ResultInterface $result */
@@ -65,7 +65,7 @@ $signedUrl = $s3->getPresignedUrl('filename.ext');
 ## Asynchronous execution
 
 ```php
-/** @var \bpsys\yii2\aws\s3\Service $s3 */
+/** @var \dudecussi\yii2\aws\s3\Service $s3 */
 $s3 = Yii::$app->get('s3');
 
 /** @var \GuzzleHttp\Promise\PromiseInterface $promise */

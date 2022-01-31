@@ -1,21 +1,21 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\interfaces;
+namespace dudecussi\yii2\aws\s3\interfaces;
 
-use bpsys\yii2\aws\s3\interfaces\commands\Command;
-use bpsys\yii2\aws\s3\interfaces\handlers\Handler;
+use dudecussi\yii2\aws\s3\interfaces\commands\Command;
+use dudecussi\yii2\aws\s3\interfaces\handlers\Handler;
 
 /**
  * Interface HandlerResolver
  *
- * @package bpsys\yii2\aws\s3\interfaces
+ * @package dudecussi\yii2\aws\s3\interfaces
  */
 interface HandlerResolver
 {
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\Command $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\Command $command
      *
-     * @return \bpsys\yii2\aws\s3\interfaces\handlers\Handler
+     * @return \dudecussi\yii2\aws\s3\interfaces\handlers\Handler
      */
     public function resolve(Command $command): Handler;
 

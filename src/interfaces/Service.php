@@ -1,18 +1,18 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\interfaces;
+namespace dudecussi\yii2\aws\s3\interfaces;
 
-use bpsys\yii2\aws\s3\interfaces\commands\Command;
+use dudecussi\yii2\aws\s3\interfaces\commands\Command;
 
 /**
  * Interface Service
  *
- * @package bpsys\yii2\aws\s3\interfaces
+ * @package dudecussi\yii2\aws\s3\interfaces
  */
 interface Service
 {
     /**
-     * @param \bpsys\yii2\aws\s3\interfaces\commands\Command $command
+     * @param \dudecussi\yii2\aws\s3\interfaces\commands\Command $command
      *
      * @return mixed
      */
@@ -21,7 +21,7 @@ interface Service
     /**
      * @param string $commandClass
      *
-     * @return \bpsys\yii2\aws\s3\interfaces\commands\Command
+     * @return \dudecussi\yii2\aws\s3\interfaces\commands\Command
      */
     public function create(string $commandClass): Command;
 }

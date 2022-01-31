@@ -1,9 +1,9 @@
 <?php
 
-namespace bpsys\yii2\aws\s3\traits;
+namespace dudecussi\yii2\aws\s3\traits;
 
-use Yii;
 use yii\web\UploadedFile;
+use Yii;
 
 /**
  * @property-read string $fileUrl
@@ -17,16 +17,16 @@ trait S3MediaTrait
     {
         return Yii::$app->get('s3');
     }
-    
+
     /**
      * Save UploadedFile to AWS S3.
      * Important: This function uploads this model filename to keep consistency of the model.
-     * 
+     *
      * @param \yii\web\UploadedFile $file Uploaded file to save
      * @param string $attribute Attribute name where the uploaded filename name will be saved
      * @param string $fileName Name which file will be saved. If empty will use the name from $file
      * @param bool $updateExtension TRUE to automatically append the extension to the file name. Default is TRUE
-     * 
+     *
      * @return string|false Uploaded filename on success or FALSE in failure.
      */
     public function saveUploadedFile(UploadedFile $file,$attribute, $fileName='', $updateExtension = true)
@@ -64,9 +64,9 @@ trait S3MediaTrait
 
     /**
      * Delete model file attribute from AWS S3.
-     * 
+     *
      * @param string $attribute Atribute name which holds the filename
-     * 
+     *
      * @return bool TRUE on success or if file doesn't exist.
      */
     public function removeFile($attribute)
@@ -81,7 +81,7 @@ trait S3MediaTrait
             ->commands()
             ->delete( $file )
             ->execute();
-        
+
         // Validate successful removal from S3
         if ( $this->isSuccessResponseStatus( $result ) ) {
             $this->{$attribute} = null;
@@ -93,9 +93,9 @@ trait S3MediaTrait
 
     /**
      * Retrieves the URL for a given model file attribute.
-     * 
+     *
      * @param string $attribute Atribute name which holds the filename
-     * 
+     *
      * @return string URL to access file
      */
     public function getFileUrl($attribute)
@@ -109,9 +109,9 @@ trait S3MediaTrait
 
     /**
      * Retrieves the presigned URL for a given model file attribute.
-     * 
+     *
      * @param string $attribute Atribute name which holds the filename
-     * 
+     *
      * @return string Presigned URL to access file
      */
     public function getFilePresignedUrl($attribute)
@@ -129,7 +129,7 @@ trait S3MediaTrait
 
     /**
      * Retrieves the URL signature expiration.
-     * 
+     *
      * @return mixed URL expiration
      */
     protected function getPresignedUrlDuration()
@@ -140,9 +140,9 @@ trait S3MediaTrait
     /**
      * Retrieves the base path on AWS S3 for a given attribute.
      * @see attributePaths()
-     * 
+     *
      * @param string $attribute Attribute to get its path
-     * 
+     *
      * @return string The path where all file of that attribute should be stored. Returns empty string if the attribute isn't in the list.
      */
     protected function getAttributePath($attribute)
@@ -159,7 +159,7 @@ trait S3MediaTrait
      * List the paths on AWS S3 to each model file attribute.
      * It must be a Key-Value array, where Key is the attribute name and Value is the base path for the file in S3.
      * Override this method for saving each attribute in its own "folder".
-     * 
+     *
      * @return array Key-Value of attributes and its paths.
      */
     protected function attributePaths()
@@ -171,9 +171,9 @@ trait S3MediaTrait
      * Check for valid status code from the AWS S3 response.
      * Success responses will be considered status codes between 200 and 204.
      * Override function for custom validations.
-     * 
+     *
      * @param \Aws\ResultInterface $response AWS S3 response containing the status code
-     * 
+     *
      * @return bool TRUE on success status.
      */
     protected function isSuccessResponseStatus($response)
